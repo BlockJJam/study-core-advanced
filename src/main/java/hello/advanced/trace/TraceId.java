@@ -22,11 +22,11 @@ public class TraceId {
     }
 
     // 다음 메서드 호출 깊이로 넘어가서 로그를 쌓을 때 필요한 ID를 (id는 갖고, level은 다른) 만들어주는 메서드
-    private TraceId createNextId(){
+    public TraceId createNextId(){
         return new TraceId(id, level+1);
     }
 
-    private TraceId createPreviousId(){
+    public TraceId createPreviousId(){
         return new TraceId(id, level -1);
     }
 
